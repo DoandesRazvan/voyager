@@ -1,0 +1,251 @@
+.store-opening
+  @extend %flex, %padding
+  +headingandcta($faded-white, $darkest-black)
+
+  justify-content: center
+  flex-direction: column
+  height: 595px
+  background:
+    image: url('../img/store-opening.jpg')
+    size: cover
+    position: bottom
+
+  .cta:hover
+    background: $light-gold
+
+    color: $faded-white
+
+  @media (max-width: 1300px)
+    background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('../img/store-opening.jpg')
+      size: cover
+      position: bottom
+
+.free-shipping
+  @extend %flex, %padding
+  +headingandcta($light-gold, $faded-white)
+
+  align-items: center
+  justify-content: space-between
+  height: 99px
+  background: $dark-black
+
+  .cta:hover
+    background: $faded-white
+
+    color: $darkest-black
+
+  @media (max-width: 447px)
+    .heading
+      font-size: 13px !important
+
+    .cta
+      font-size: 13px !important
+      
+.retro-sweater
+  @extend %flex, %padding
+  +headingandcta($faded-white, $darkest-black)
+
+  align-items: flex-end
+  justify-content: center
+  flex-direction: column
+  height: 869px
+  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('../img/retro-sweater.jpg')
+    size: cover
+    position: top
+
+  .cta:hover
+    background: $firebrick
+
+    color: $faded-white
+
+.newsletter
+  @extend %flex, %padding
+
+  align-items: center
+  justify-content: space-between
+  height: 80px
+  background: $darkest-black
+
+  &--logo
+    @extend %flex
+
+    align-items: center
+
+    text-transform: uppercase
+
+    &--heading
+      font:
+        family: $main
+        weight: 400
+        size: 40px
+      color: $faded-white
+
+    &--tagline
+      margin-left: 10px
+      font:
+        family: $secondary
+        size: 20px
+      color: darken($faded-white, 10%);
+  
+  &--lead
+    font:
+      family: $secondary
+      size: 20px
+    text-decoration: none
+    color: $faded-white
+
+    @media (max-width: 625px)
+      font-size: 16px
+    
+    @media (max-width: 470px)
+      font-size: 14px
+
+.choose-style
+  @extend %flex, %padding
+
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  height: 949px
+  padding:
+    top: 20px
+    bottom: 20px
+
+  &--heading
+    @extend %padding // only needed below 1270px in case of something. unfortunately can't add this to the media query due to sass restrictions, so it had to be added here.
+
+    align-self: stretch
+
+    font:
+      family: $main
+      weight: 400
+      size: 60px
+    text:
+      align: center
+      transform: uppercase
+    color: $black
+
+  &--styles
+    @extend %flex
+
+    justify-content: space-between
+    width: 100%
+    height: 805px
+    margin-top: 20px
+
+    &--option
+      @extend %flex
+      
+      align-items: center
+      justify-content: center
+      width: 905px
+      height: 100%
+
+      font-size: 80px
+      text-transform: uppercase
+      color: $faded-white
+
+      cursor: pointer
+
+      &:first-child
+        background: linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.40)), url('../img/classy.jpg')
+          size: cover
+          position: center
+
+        font-family: $main
+
+        &:hover
+          background: linear-gradient(rgba(0,0,0,0.20), rgba(0,0,0,0.20)), url('../img/classy.jpg')
+            size: cover
+            position: center
+
+      &:nth-child(2)
+        background: linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.40)), url('../img/flashy.jpg')
+          size: cover
+          position: center
+
+        font-family: $tertiary
+        letter-spacing: 10px
+
+        &:hover
+          background: linear-gradient(rgba(0,0,0,0.20), rgba(0,0,0,0.20)), url('../img/flashy.jpg')
+            size: cover
+            position: center
+
+  @media (max-width: 1270px)
+    justify-content: flex-start
+    height: auto
+    padding:
+      right: 0px
+      left: 0px
+
+    &--styles
+      flex-direction: column
+      align-items: center
+      height: auto
+
+      &--option
+        width: 100%
+        height: 600px
+
+        &:nth-child(2)
+          margin-top: 20px
+
+  @media (max-width: 700px)
+    &--heading
+      font-size: 40px
+
+    &--styles--option
+      font-size: 55px
+
+  @media (max-width: 450px)
+    &--heading
+      font-size: 24px
+
+    &--styles--option
+      height: 450px !important
+
+      font-size: 40px
+
+.worldwide-shipping
+  @extend %flex, %padding
+  +headingandcta($faded-white, $darkest-black)
+
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  height: 595px
+  background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('../img/worldwide-shipping.jpg')
+    size: cover
+    position: center
+
+  .cta:hover
+    background: $dark-green
+
+    color: $faded-white
+
+.social-bar
+  @extend %flex, %padding
+
+  align-items: center
+  justify-content: center
+  height: 60px
+
+  background: $dark-black
+
+  &--icon
+    margin-left: 80px
+
+    color: $faded-white
+    text-decoration: none
+
+    transition: all 0.15s ease-in-out
+
+    &:first-child
+      margin-left: 0px
+
+    &:hover
+      color: $light-gold
+
+    @media (max-width: 450px)
+      margin-left: 60px

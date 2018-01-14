@@ -1,0 +1,90 @@
+.footer-menus
+  @extend %flex, %padding
+
+  justify-content: center
+  height: 294px
+  padding:
+    top: 20px
+    bottom: 20px
+
+  background: $darkest-black
+
+  &--menu
+    @extend %flex
+
+    flex-direction: column
+    margin-left: 300px
+
+    text-transform: uppercase
+
+    &:first-child
+      margin-left: 0px
+
+    &--heading
+      font:
+        family: $tertiary
+        size: 30px
+      letter-spacing: 3px
+      color: $faded-white
+
+    &--link
+      margin-top: 10px
+
+      font:
+        family: $main
+        size: 14px
+      text-decoration: none
+      color: darken($faded-white, 10%)
+
+    @media (max-width: 1376px)
+      margin-left: 150px
+
+  @media (max-width: 925px)
+    flex-direction: column
+    height: auto
+
+    &--menu
+      margin:
+        top: 50px
+        left: 0px
+
+      &:first-child
+        margin-top: 0px
+
+@media (max-width: 1050px)
+  .store-opening, .retro-sweater
+    align-items: center
+
+  .store-opening
+    height: 400px
+
+  .retro-sweater
+    height: 550px
+
+  .worldwide-shipping
+    height: 400px
+
+@media (max-width: 1250px)
+  .free-shipping, .newsletter
+    flex-direction: column
+    justify-content: center
+    height: auto
+    padding:
+      top: 40px
+      bottom: 40px
+    
+    text-align: center
+
+  .free-shipping .cta
+    margin-top: 10px
+
+@media (max-width: 650px)
+  .store-opening, .free-shipping, .retro-sweater, .worldwide-shipping
+    .heading
+      font-size: 20px
+
+    .cta
+      height: 30px
+      width: 190px
+
+      font-size: 20px

@@ -1,0 +1,22 @@
+include ../0-mixins/_headingandcta
+
+doctype html
+html
+	head
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Lora|Poppins")
+		link(rel="stylesheet" href="../css/index.css")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+		meta(name="viewport" content="width=device-width, initial-scale = 1.0 user-scalable=no")
+		title Voyager - Home
+	body
+		header#header
+			include ../1-modules/_header
+
+		main#main
+			include ../1-modules/_main
+			
+		footer#footer
+			include ../1-modules/_footer
+
+		script(src="../js/index.js")

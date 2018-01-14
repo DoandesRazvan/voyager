@@ -1,0 +1,116 @@
+.logo
+  @extend %padding
+
+  padding:
+    top: 20px
+    bottom: 20px
+
+  text:
+    align: center
+    transform: uppercase
+  
+  &--heading
+    font:
+      family: $main
+      size: 60px
+      weight: 400
+    color: $black
+
+    line-height: 84px
+
+  &--tagline
+    font:
+      family: $secondary
+      size: 40px
+    color: $light-black
+    
+  @media (max-width: 1150px)
+    display: none
+
+  // @media (max-width: 672px)
+  //   &--heading
+  //     font-size: 40px
+
+  //     line-height: initial
+
+  //   &--tagline
+  //     font-size: 20px
+  
+  // @media (max-width: 375px)
+  //   &--heading
+  //     font-size: 32px
+
+  //     line-height: initial
+
+  //   &--tagline
+  //     font-size: 16px
+
+.navbar
+  @extend %flex, %padding
+
+  align-items: center
+  justify-content: center
+  height: 80px
+  background: $faded-white
+
+  &--links
+    display: flex
+
+    &--link
+      margin-left: 40px
+
+      font:
+        family: $secondary
+        size: 30px
+      text:
+        decoration: none
+        transform: uppercase
+      color: $dark-gray
+
+      &:first-child
+        margin-left: 0
+
+      &:nth-child(2)
+        color: $light-gold
+    
+  &-button // not inside navbar
+    display: none
+
+    color: $faded-white
+
+  @media (max-width: 1150px)
+    position: absolute
+    display: none
+    width: 100vw
+    height: 100vh
+    top: 0px
+    background: $dark-green
+
+    &--links
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      width: 100%
+      height: 100%
+
+      &--link
+        margin:
+          top: 10px
+          left: 0px
+
+        font-size: 20px
+        color: $faded-white
+
+        &:first-child
+          margin-top: 0
+          
+        &:nth-child(2)
+          color: lighten($light-gold, 20%)
+
+    &-button // not inside navbar
+      position: absolute
+      display: initial
+      top: 10px
+      right: 40px
+      margin-left: auto
+      z-index: 1
